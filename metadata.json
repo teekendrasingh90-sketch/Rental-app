@@ -1,0 +1,5 @@
+{
+  "name": "Dera",
+  "description": "A professional platform for landlords to list rooms and renters to find their perfect home. Features real-time chat, multi-language support, and a sleek black-and-white theme.",
+  "requestFramePermissions": ["geolocation"]
+}

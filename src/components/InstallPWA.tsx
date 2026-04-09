@@ -40,30 +40,30 @@ export default function InstallPWA() {
     <AnimatePresence>
       {showBanner && (
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
-          className="fixed bottom-24 left-4 right-4 z-[100] bg-black text-white p-4 rounded-3xl shadow-2xl border border-white/10 flex items-center justify-between"
+          exit={{ opacity: 0, y: -100 }}
+          className="fixed top-4 left-4 right-4 z-[200] bg-white text-black p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-black/5 flex items-center justify-between"
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center">
-              <Download size={20} className="text-blue-400" />
+            <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center shadow-lg">
+              <Download size={24} className="text-white" />
             </div>
             <div>
-              <p className="text-sm font-black">Install Dera App</p>
-              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Fast & Offline Access</p>
+              <p className="text-sm font-black leading-tight">Install Dera App</p>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Direct Android Installation</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={onClick}
-              className="bg-blue-500 text-white px-4 py-2 rounded-xl text-xs font-black active:scale-95 transition-transform"
+              className="bg-black text-white px-5 py-2.5 rounded-2xl text-xs font-black active:scale-95 transition-transform shadow-md"
             >
-              INSTALL
+              INSTALL NOW
             </button>
             <button
               onClick={() => setShowBanner(false)}
-              className="p-2 text-gray-400 hover:text-white"
+              className="p-2 text-gray-400 hover:text-black transition-colors"
             >
               <X size={20} />
             </button>
